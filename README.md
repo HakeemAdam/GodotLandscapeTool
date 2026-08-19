@@ -3,7 +3,7 @@ A tool for creating landscape based on a texture or procedural noise. Based on t
 
 ![image](./media/ladnscapeteolldemo.gif)
 
-[Blog Post](link)
+[Blog Post](https://hakeemadam.squarespace.com/config/)
 
 # godot-cpp template
 This repository serves as a quickstart template for GDExtension development with Godot 4.0+.
