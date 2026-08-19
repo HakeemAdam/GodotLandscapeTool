@@ -6,6 +6,17 @@
 /bin/**
 !project/bin/*.gdextension
 
+# Ignore compiled GDExtension binaries
+project/bin/windows/
+project/bin/linux/
+project/bin/macos/
+project/bin/android/
+project/bin/ios/
+project/bin/web/
+*.dll
+*.so
+*.dylib
+
 # Ignore scons database
 .sconsign*.dblite
 
