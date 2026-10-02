@@ -1,0 +1,14 @@
+[remap]
+
+importer="glsl"
+type="RDShaderFile"
+uid="uid://b1on0kyuwp64d"
+path="res://.godot/imported/fbm_terrain.glsl-89911bead249bb783a0164886151f28a.res"
+
+[deps]
+
+source_file="res://shaders/fbm_terrain.glsl"
+dest_files=["res://.godot/imported/fbm_terrain.glsl-89911bead249bb783a0164886151f28a.res"]
+
+[params]
+
