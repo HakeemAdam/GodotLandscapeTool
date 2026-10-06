@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://dgsa7h2r2h6bt"]
 
-[ext_resource type="Shader" uid="uid://dexroni33tbgg" path="res://shaders/Landscape_shader1.gdshader" id="1_3sglg"]
+[ext_resource type="Shader" uid="uid://chkuyvkr5jo65" path="res://shaders/Landscape_shader1.gdshader" id="1_3sglg"]
 [ext_resource type="Texture2D" uid="uid://ljyuwyid08aa" path="res://assets/LS_BS.exr" id="2_sj726"]
 [ext_resource type="Texture2D" uid="uid://b4teu6a6gffrf" path="res://assets/Chokepoint_Out.exr" id="3_4pc36"]
 [ext_resource type="Script" uid="uid://cr5kwb6g6ss4j" path="res://scripts/camera_controller.gd" id="4_sj726"]
@@ -71,9 +71,9 @@ use_texture = true
 material_override = SubResource("ShaderMaterial_h6x0i")
 mesh = SubResource("ArrayMesh_sj726")
 
-[node name="Landscape_col" type="StaticBody3D" parent="Landscape" unique_id=1128595677]
+[node name="Landscape_col" type="StaticBody3D" parent="Landscape" unique_id=428738111]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Landscape/Landscape_col" unique_id=1306942158]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Landscape/Landscape_col" unique_id=511890271]
 shape = SubResource("ConcavePolygonShape3D_4pc36")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1953217359]

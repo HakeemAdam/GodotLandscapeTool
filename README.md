@@ -1,7 +1,7 @@
 # Landscape tool
-A tool for creating landscape based on a texture or procedural noise. Based on the godot-cpp template
+A tool for creating landscape based on a texture or procedural noise. One version on the CPU and another on the GPU with erosion. Require Godot 4.8 and up.
 
-![image](./media/ladnscapeteolldemo.gif)
+![image](./media/ErosionDemo.gif)
 
 [Blog Post](https://hakeemadam.squarespace.com/config/)
 

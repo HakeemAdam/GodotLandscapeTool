@@ -47,6 +47,14 @@ var time: float = 0.0
 			update_noise()
 			make_mesh()
 			
+@export var useErosion : int = 0
+@export var inertia : float = 0.05
+@export var sedimentCapacityFactor : float = 4.0
+@export var minSedimentCapacityFactor : float = 0.01
+@export var erosionSpeed : float = 0.01
+@export var depositionSpeed : float = 0.01
+@export var evaporationRate : float = 0.02
+@export var gravity : float = 4.0
 			
 var rd : RenderingDevice
 var shader_rid: RID
@@ -104,7 +112,8 @@ func update_noise():
 
 func make_mesh():
 	
-	st.clear()
+	if st:
+		st.clear()
 	st.begin(Mesh.PRIMITIVE_TRIANGLES)
 	var spacing : float = 1.0
 	var height_scale : float = 150.0

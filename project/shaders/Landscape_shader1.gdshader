@@ -1,8 +1,6 @@
 shader_type spatial;
 render_mode  specular_toon;
 
- 
-
 uniform vec3 water_color = vec3(0.05, 0.15, 0.25);
 uniform vec3 ground_color = vec3(0.86, 0.52, 0.14);
 uniform vec3 grass_color = vec3(0.22, 0.38, 0.18);
@@ -20,8 +18,7 @@ void vertex() {
 }
 
 void fragment() {
-	
-	
+
 	
 	float height = clamp((world_pos.y - 0.0)/ scale, -1.0, 1.0);
 
@@ -40,8 +37,8 @@ void fragment() {
 	vec4 sample_color = texture(text, UV);
 
 	
-	//ALBEDO = sample_color.rgb;
-	ALBEDO = mix( sample_color.rgb, current_color, height);
+	ALBEDO = sample_color.rgb;
+	//ALBEDO = mix( sample_color.rgb, current_color, height);
 	ROUGHNESS = 0.9;
 	SPECULAR = 0.1;
 

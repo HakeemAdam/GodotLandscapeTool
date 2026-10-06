@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://ckjm2ae6rgiqx"]
 
-[ext_resource type="Script" uid="uid://ohwb1ad2pgab" path="res://scripts/ComputeTerrain3d.gd" id="1_cdku5"]
-[ext_resource type="Script" uid="uid://cr5kwb6g6ss4j" path="res://scripts/camera_controller.gd" id="4_n8qcx"]
+[ext_resource type="Script" uid="uid://o143li830y0e" path="res://scripts/ComputeTerrain3dErosion.gd" id="1_cdku5"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_hgv3e"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -24,14 +23,24 @@ shadow_enabled = true
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1447562756]
 environment = SubResource("Environment_igf03")
 
+[node name="Node3D" type="Node3D" parent="." unique_id=1796336958]
+script = ExtResource("1_cdku5")
+speed = 2.43
+seed_value = 42.5
+scale = 1.056
+detail = 2.028
+pan_direction = Vector2(0.905, 0)
+manual_pan = Vector2(-0.145, -4.6)
+step = 100
+inertia = 0.162
+sedimentCapacityFactor = 1.038
+minSedimentCapacityFactor = 0.052
+erosionSpeed = 2.439
+depositionSpeed = 0.633
+evaporationRate = 0.4
+gravity = 3.39
+
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1585363834]
 transform = Transform3D(-0.99839187, 0.01822208, -0.053680506, 0, 0.9469301, 0.32143953, 0.056688983, 0.3209226, -0.94540733, 75.355934, 103.69339, 171.18918)
-script = ExtResource("4_n8qcx")
-
-[node name="Node3D" type="Node3D" parent="." unique_id=1775671671]
 script = ExtResource("1_cdku5")
-seed_value = 977.97
-scale = 0.96
-detail = 1.29
-pan_direction = Vector2(0.79, 0.32)
-pan_speed = 1.15
+speed = 10.0

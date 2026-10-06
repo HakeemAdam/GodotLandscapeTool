@@ -8,7 +8,8 @@ layout(rgba32f, set = 0, binding = 0) uniform writeonly image2D output_heightmap
 layout(push_constant, std430) uniform Parameters {
         float noise_seed;
         float time;
-        vec2 pan_direction;
+        float pan_direction_x;
+        float pan_direction_y;
         float pan_speed;
         float scale;
         float detail;
@@ -64,8 +65,9 @@ void main() {
 
         vec2 uv = vec2(pixel_cord) / vec2(size);
         vec2 manual = vec2(params.manual_pan_x, params.manual_pan_y);
+        vec2 direction = vec2(params.pan_direction_x, params.pan_direction_y);
 
-        vec2 offset = (uv * params.detail) + params.pan_direction * mod(params.time, 100) * params.pan_speed + manual;
+        vec2 offset = (uv * params.detail) + direction * mod(params.time, 100) * params.pan_speed + manual;
 
         float height = get_height(offset) * params.scale;
         vec4 color = vec4(vec3(height), 1.0);
